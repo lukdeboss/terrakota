@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Play') {
             steps {
-                echo 'robie play"
+                echo 'robie play'
                 sh 'chmod +x play.sh'
                 sh './play.sh'
             }
