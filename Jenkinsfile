@@ -14,8 +14,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                echo "zakladam ze to jest tutaj"
-                sh 'ls -al '
+                sh 'ls -al /bin/terra*'
+                sh 'terraform --version'
             }
         }
         stage('Deploy') {
