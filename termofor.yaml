@@ -9,13 +9,14 @@
 
     - name: install terraform
       shell: curl -o /tmp/terraform.zip https://releases.hashicorp.com/terraform/0.12.2/terraform_0.12.2_linux_amd64.zip
-      creates: /tmp/terraform.zip
+      args:
+        creates: /tmp/terraform.zip
 
     - name: unzip terraform
       shell: unzip /tmp/terraform.zip
       args:
         chdir: /bin
-      creates: /bin/terraform
+        creates: /bin/terraform
 
     - name: checking if tf exists
       shell: "ls -al /bin/terr*"    
